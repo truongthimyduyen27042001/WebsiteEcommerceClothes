@@ -1,0 +1,12 @@
+create trigger trg_od
+on Orders
+for insert
+as
+begin
+	declare @proID int
+	declare @proNum int
+	select @proID = proID, @proNum = proNum from inserted
+	update Products
+	set proNOS = proNOS + @proNum
+	where @proID = proID
+end

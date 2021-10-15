@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDonHangKhachHang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styleOrderTest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <!-- phan bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Toan bo -->
+    <div class="orders">
+        <!-- Phan navbar -->
+        <header id="header">
+            <div class="grid">
+
+                <nav class="header__navbar">
+            
+                    <ul class="header__navbar-list">
+            
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
+                            Vào cửa hàng trên ứng dụng DDVT
+            
+                            <div class="header__qr">
+                                <img src="https://cdn-www.vinid.net/2020/10/ae482776-qr-code-vinid.jpg" alt="QR_CODE" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="https://www.tudiengia.com/wp-content/uploads/2019/04/Play-Store-Error-Code-910.jpg" alt="GG PLAY" class="header__qr-dowload-img">
+                                        <span>GOOGLE PLAY</span>
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="https://congnghenhat.com/wp-content/uploads/2019/09/H%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A1ch-chuy%E1%BB%83n-v%C3%B9ng-AppStore-t%E1%BB%AB-Nh%E1%BA%ADt-v%E1%BB%81-l%E1%BA%A1i-Vi%E1%BB%87t-Nam-cho-c%C3%A1c-thi%E1%BA%BFt-b%E1%BB%8B-iOS.jpg" alt="appstore" class="header__qr-dowload-img">
+                                        <span>APPSTORE</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item ">
+                            <span class="header__navbar-title--no-pointer">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class=" header__navbar-icon fab fa-instagram"></i>
+                            </a>
+            
+            
+                    </li></ul>
+            
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <!-- để khi trỏ chuột vào hiện ra thì cần 1 link -->
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <!-- làm một thẻ để khi di chuột vòa thông báo nó hiện lên -->
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông Báo Mới Nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://agiare.vn/wp-content/uploads/2019/08/bo-quan-ao-the-thao-nam.jpg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Quần áo thể thao chính hãng của DDVT
+                                                    và nhiều phụ kiện đi kèm</span>
+                                                <span class="header__notify-description">Những phụ kiện không thể thiếu
+                                                    của DDVT và những sản phẩm được sale </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://agiare.vn/wp-content/uploads/2019/08/bo-quan-ao-the-thao-nam.jpg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Quần áo thể thao chính hãng của DDVT
+                                                    và nhiều phụ kiện đi kèm</span>
+                                                <span class="header__notify-description">Những phụ kiện không thể thiếu
+                                                    của DDVT và những sản phẩm được sale</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class="header__notify-link">
+                                            <img src="https://agiare.vn/wp-content/uploads/2019/08/bo-quan-ao-the-thao-nam.jpg" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Quần áo thể thao chính hãng của DDVT
+                                                    và nhiều phụ kiện đi kèm </span>
+                                                <span class="header__notify-description">Những phụ kiện không thể thiếu
+                                                    của DDVT và những sản phẩm được sale </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__modify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                            
+                        </li>
+                        <li class="header__navbar-item">
+                            <!-- Tương tự như trên -->
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon far fa-question-circle"></i>
+                                Trợ giúp
+                            </a>
+                            
+                        </li>
+                        <!-- <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng kí</li>
+                        <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li>-->
+                        <li class="header__navbar-item header__navbar-user" id="useraccount" style="display: flex;">
+                            <img id="userIMG" src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/195793385_342374527308421_8898602881913259539_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_ohc=cJON1bRGdqcAX8_LFyq&_nc_ht=scontent.fhan14-2.fna&oh=ab84f374271e559b40ac17f1fc025b2b&oe=60E71F9D" alt="" class="header__navbar-user-img">
+                            <span id="userName">Trần Thị Sa</span>
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item" onclick="DoiThongTinNguoiDung()">
+                                    <a href="">Thay đổi thông tin</a>
+                                </li>
+                                <li class="header__navbar-user-item" onclick="DoiMatKhauNguoiDung()">
+                                    <a href="">Đổi mật khẩu</a>
+                                </li>
+                                <!-- <li class="header__navbar-user-item">
+                                    <a href="../../Buyer/src/orderManage.html">Đơn mua hàng</a> -->
+                                </li>
+                                <li class="header__navbar-user-item" id="adminManage">
+                                    <a href="../../Admin/src/orderAdmin.html">Quản lý Website</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--sperate">
+                                    <a onclick="logOut()" style="color: #000000">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="logInOut" style="display: none;">
+                            <p id="register" onclick="openRegister()">Đăng Ký</p>
+            
+                            <p id="logIn" onclick="openLogInOut()">Đăng nhập</p>
+            
+                        </li>
+                    </ul>
+                </nav>
+                <!-- header-with-searchs -->
+                <nav class="header-with-search">
+                    <!-- vùng chứa logo -->
+                    <div class="header__logo">
+                        <a href="../../giaodienchinh/src/index.html" class="header__logo-link">
+                            <img src="./../../public/images/logo.png" alt="LOGO">
+                        </a>
+                    </div>
+            
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+            
+                            <!-- search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Quần thể thao</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Áo tanktop</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Áo thể thao</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong shop</span>
+                            <i class="header__search-select-icon fas fa-angle-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Ngoài shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+            
+                    <!-- card layout -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice" id="totalProduct">0</span>
+                            <!-- Nếu có sản phẩm -->
+                
+                            <!-- <div class="header__cart-list">       
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                            
+                                    <li class="header__cart-item">
+                                        <img src="https://hoang-phuc.com/media/catalog/product/cache/911a4dad289f521f5a511212882e4276/k/0/k0a32dy02-888-3.jpg" alt="quần thể thao nam" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kappa quần shorts thể thao nam </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">695.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Xanh , L
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://product.hstatic.net/1000326314/product/dsc_3882_0e0e789ef00e4541a1f40f3cd8c3a635_master.jpg" alt="áo tanktop nam" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Áo tanktop nam </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Đen , XL
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://dongphucthaihoa.vn/wp-content/uploads/2018/10/ao-thun-the-thao-1.png" alt="áo thể thao" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Áo thể thao nam cá tính </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">175.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">3</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Đen , M
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://hoang-phuc.com/media/catalog/product/cache/911a4dad289f521f5a511212882e4276/k/0/k0a32dy02-888-3.jpg" alt="quần thể thao nam" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kappa quần shorts thể thao nam</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">695.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Xanh , L
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://product.hstatic.net/1000326314/product/dsc_3882_0e0e789ef00e4541a1f40f3cd8c3a635_master.jpg" alt="áo tanktop nam" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Áo tanktop nam </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Đen , XL
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://dongphucthaihoa.vn/wp-content/uploads/2018/10/ao-thun-the-thao-1.png" alt="áo thể thao" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Áo thể thao nam cá tính </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">175.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">3</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Đen , M
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://hoang-phuc.com/media/catalog/product/cache/911a4dad289f521f5a511212882e4276/k/0/k0a32dy02-888-3.jpg" alt="quần thể thao nam" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kappa quần shorts thể thao nam</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">695.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Xanh , L
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://product.hstatic.net/1000326314/product/dsc_3882_0e0e789ef00e4541a1f40f3cd8c3a635_master.jpg" alt="áo tanktop nam" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Áo tanktop nam </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">200.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">1</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Đen , XL
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://dongphucthaihoa.vn/wp-content/uploads/2018/10/ao-thun-the-thao-1.png" alt="áo thể thao" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Áo thể thao nam cá tính </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">175.000đ</span>
+                                                    <span class="header__cart-item-mutiply">x</span>
+                                                    <span class="header__cart-item-quatity">3</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại : Đen , M
+                                                </span>
+                                                <span class="header__cart-item-remove">
+                                                    Xóa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+            
+                                </ul>
+                                <a href="" class="header__card-view-cart btn btn--primary">Xem giỏ hàng</a>
+                            </div>  -->
+                            
+                            <!-- Khoong có sản phẩm -->
+                            <div class="header__cart-list" id="header-no-product">        
+                                <i class="fas fa-tags"></i>
+                                <p style="font-size:1.3rem">Chưa có sản phẩm !!</p>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Phaanf luawj chon  -->
+                <div class="select-product">
+                    <ul class="list-choice-product">
+                        <li><a href="../../giaodienchinh/src/index.html" onclick="cate0()">Sản phẩm</a></li>
+                        <li><a href="../../giaodienchinh/src/index.html" onclick="cate1()">Áo quần thể thao</a></li>
+                        <li> <a href="../../giaodienchinh/src/index.html" onclick="cate2()">Giày thể thao</a></li>
+                        <li> <a href="../../giaodienchinh/src/index.html" onclick="cate3()">Dụng cụ thể thao</a></li>
+                        <li> <a href="../../giaodienchinh/src/index.html" onclick="cate4()">Bóng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Phần quản lý  -->
+        <div id="app-container">
+            <div class="grid"  id="managerOrders" >
+                <div class="grid-manager">
+                    <div class="grid-control">
+                        <!-- phan ho so của người dùng -->
+                        <nav class="profileUser container">
+                            <div class="row">
+                                <div class="col-4">
+                                   <div class="proIMG"><img id="userInfoIMG" src="https://scontent.fsgn2-2.fna.fbcdn.net/v/t39.30808-6/210123151_878669429523828_2425402080193817958_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=825194&_nc_ohc=MG6MrLUmB54AX-uo3Gi&tn=5MvL9G9UO9dOJYEz&_nc_ht=scontent.fsgn2-2.fna&oh=3ae781aa18a51ef9cdab49eec0c97a83&oe=61109B50" alt=""></div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="nameUser"><p id="userAccount">myduyen01_</p></div>
+                                    <div class="editProfile">
+                                        <i class="fas fa-pencil-alt"></i>
+                                        <p>Sửa Hồ Sơ</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="managerAccount">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="userpage-sidebar-menu-entry__icon" style="background-color: rgb(255, 193, 7);"><svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopee-svg-icon user-page-sidebar-icon icon-headshot"><g><circle cx="7.5" cy="4.5" fill="none" r="3.8" stroke-miterlimit="10"></circle><path d="m1.5 14.2c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke-linecap="round" stroke-miterlimit="10"></path></g></svg></div>
+                                    </div>
+                                    <div class="col-10">
+                                        <a href=""><p>Tài khoản của tôi</p></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="userpage-sidebar-menu-entry__icon" style="background-color: rgb(68, 181, 255);"><svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopee-svg-icon user-page-sidebar-icon " style="fill: rgb(255, 255, 255);"><g><rect fill="none" height="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="8" x="4.5" y="1.5"></rect><polyline fill="none" points="2.5 1.5 2.5 13.5 12.5 13.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></polyline><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" x2="10.5" y1="4" y2="4"></line><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" x2="10.5" y1="6.5" y2="6.5"></line><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" x2="10.5" y1="9" y2="9"></line></g></svg></div>
+                                    </div>
+                                    <div class="col-10">
+                                        <a href=""><p>Đơn mua</p></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="userpage-sidebar-menu-entry__icon" style="background-color: rgb(238, 77, 45);"><svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopee-svg-icon user-page-sidebar-icon "><g><path d="m12 10.2 1.5 2h-12l1.5-2v-7.4c0-.5.5-1 1-1h7c .6 0 1 .5 1 1z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></path><path d="m6 2c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5" fill="none" stroke-miterlimit="10"></path><path d="m5.8 13.5c.4.6 1 1 1.8 1s1.4-.4 1.8-1z"></path></g></svg></div>                                    </div>
+                                    <div class="col-10">
+                                        <a href=""><p>Thông báo</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </nav>
+                    </div>
+                    <div class="grid-orders">
+                        <!-- Luc chon trang thai -->
+                        <div class="container home-filler">
+                            <div class="row choiceManagers">
+                                <div class="col-2">
+                                   <div class="choice-small choice-active" onclick = "getListUserUID(0)">
+                                       <a>Tất cả</a>
+                                   </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="choice-small" onclick="getListUserUID(1)">
+                                        <a>Chờ xác nhận</a>
+                                    </div>
+                                 </div>
+                                 <div class="col-2">
+                                    <div class="choice-small">
+                                        <a>Chờ lấy hàng</a>
+                                    </div>
+                                 </div>
+                                 <div class="col-2">
+                                    <div class="choice-small" onclick="getListUserUID(3)">
+                                        <a>Đang giao</a>
+                                    </div>
+                                 </div>
+                                 <div class="col-2">
+                                    <div class="choice-small" onclick="getListUserUID(4)">
+                                        <a>Đã giao</a>
+                                    </div>
+                                 </div>
+                                 <div class="col-2">
+                                    <div class="choice-small" onclick="getListUserUID(5)">
+                                        <p>Đã Hủy</p>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <!-- Tim kiem -->
+                        <div class="container pt-3">
+                            <div class="row" id="findOrders">
+                                <div class="col-12">
+                                    <input type="text" placeholder="Tìm kiếm theo tên sản phẩm">
+                                    <div class="icon-search">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- list san pham -->
+                       <div id="listOrders">
+           
+                       </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Phần chat -->
+        <div id="chat">
+            <i class="_3kEAcT1Mk5 src-components-MainLayout-index__chat--3J2KN"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="chat-icon"><path d="M18 6.07a1 1 0 01.993.883L19 7.07v10.365a1 1 0 01-1.64.768l-1.6-1.333H6.42a1 1 0 01-.98-.8l-.016-.117-.149-1.783h9.292a1.8 1.8 0 001.776-1.508l.018-.154.494-6.438H18zm-2.78-4.5a1 1 0 011 1l-.003.077-.746 9.7a1 1 0 01-.997.923H4.24l-1.6 1.333a1 1 0 01-.5.222l-.14.01a1 1 0 01-.993-.883L1 13.835V2.57a1 1 0 011-1h13.22zm-4.638 5.082c-.223.222-.53.397-.903.526A4.61 4.61 0 018.2 7.42a4.61 4.61 0 01-1.48-.242c-.372-.129-.68-.304-.902-.526a.45.45 0 00-.636.636c.329.33.753.571 1.246.74A5.448 5.448 0 008.2 8.32c.51 0 1.126-.068 1.772-.291.493-.17.917-.412 1.246-.74a.45.45 0 00-.636-.637z"></path></svg></i>
+            <i class="_3kEAcT1Mk5 src-components-MainLayout-index__logo--1byC8"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 22" class="chat-icon"><path d="M9.286 6.001c1.161 0 2.276.365 3.164 1.033.092.064.137.107.252.194.09.085.158.064.203 0 .046-.043.182-.194.251-.26.182-.17.433-.43.752-.752a.445.445 0 00.159-.323c0-.172-.092-.3-.227-.365A7.517 7.517 0 009.286 4C5.278 4 2 7.077 2 10.885s3.256 6.885 7.286 6.885a7.49 7.49 0 004.508-1.484l.022-.043a.411.411 0 00.046-.71v-.022a25.083 25.083 0 00-.957-.946.156.156 0 00-.227 0c-.933.796-2.117 1.205-3.392 1.205-2.846 0-5.169-2.196-5.169-4.885C4.117 8.195 6.417 6 9.286 6zm32.27 9.998h-.736c-.69 0-1.247-.54-1.247-1.209v-3.715h1.96a.44.44 0 00.445-.433V9.347h-2.45V7.035c-.021-.043-.066-.065-.111-.043l-1.603.583a.423.423 0 00-.29.41v1.362h-1.781v1.295c0 .238.2.433.445.433h1.337v4.19c0 1.382 1.158 2.505 2.583 2.505H42v-1.339a.44.44 0 00-.445-.432zm-21.901-6.62c-.739 0-1.41.172-2.013.496V4.43a.44.44 0 00-.446-.43h-1.788v13.77h2.234v-4.303c0-1.076.895-1.936 2.013-1.936 1.117 0 2.01.86 2.01 1.936v4.239h2.234v-4.561l-.021-.043c-.202-2.088-2.012-3.723-4.223-3.723zm10.054 6.785c-1.475 0-2.681-1.12-2.681-2.525 0-1.383 1.206-2.524 2.681-2.524 1.476 0 2.682 1.12 2.682 2.524 0 1.405-1.206 2.525-2.682 2.525zm2.884-6.224v.603a4.786 4.786 0 00-2.985-1.035c-2.533 0-4.591 1.897-4.591 4.246 0 2.35 2.058 4.246 4.59 4.246 1.131 0 2.194-.388 2.986-1.035v.604c0 .237.203.431.453.431h1.356V9.508h-1.356c-.25 0-.453.173-.453.432z"></path></svg></i>
+        </div>
+        <!-- cuối cùng là foooter -->
+        <footer class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="footer-title"><p>Chăm sóc khách hàng</p></div>
+                    <div class="footer-content">
+                        <p>Trung tâm trợ giúp</p>
+                        <p>DDVT-Shop</p>
+                        <p>Hướng dẫn mua hàng</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-title"><p>Giới thiệu</p></div>
+                    <div class="footer-content">
+                        <p>Giới thiệu</p>
+                        <p>Tuyển dụng</p>
+                        <p>Điều khoản</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-title"><p>Danh mục</p></div>
+                    <div class="footer-content">
+                        <p>Áo thể thao</p>
+                        <p>Quần thể thao</p>
+                        <p>Phụ kiện</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-title"><p>Theo dõi chúng tôi</p></div>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="#" class="footer-item__link">
+                                <i class="footer-item__icon fab fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#" class="footer-item__link">
+                                <i class="footer-item__icon fab fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#" class="footer-item__link">
+                                <i class="footer-item__icon fab fa-twitter-square"></i>
+                                Twitter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="footer-title"><p>Vào cửa hàng trên ứng dụng</p></div>
+                    <div class="footer__dowload">
+                        <img src="https://toanhocbactrungnam.vn/uploads/news/2019_11/1573006985.png" alt="Mã Qr" class="footer__dowload-qr">
+                        <div class="footer__dowload-app">
+                            <a href="" class="footer__dowload-app-link">
+                                <img src="https://sites.google.com/site/taichplaymjenphivem2019/_/rsrc/1539059092276/home/chplay.png?height=200&amp;width=200" alt="Ch-play">
+                                <span>GOOGLE PLAY</span>
+                            </a>
+                            <a href="" class="footer__dowload-app-link">
+                                <img src="https://e7.pngegg.com/pngimages/566/36/png-clipart-app-store-iphone-apple-app-store-icon-blue-text.png" alt="appstore">
+                                <span>APPSTORE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+        
+    </div>
+
+    
+
+    
+    <script>
+        
+        window.addEventListener("scroll",function(){
+        let header=document.querySelector("#header");
+        header.classList.toggle("sticky",window.scrollY>0);
+        })
+    </script>
+     <script src="../script/Test.js"></script>
+
+</body>
+</html>

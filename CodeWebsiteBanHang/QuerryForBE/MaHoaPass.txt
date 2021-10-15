@@ -1,0 +1,10 @@
+ALTER TABLE Users
+ALTER COLUMN userPass nvarchar(150)
+
+-- mã hóa mật khẩu
+UPDATE Users 
+SET userPass = EncryptByPassPhrase('PBL3', userPass )
+
+-- giải mã mật khẩu
+UPDATE Users 
+SET userPass = DecryptByPassPhrase('PBL3', userPass )

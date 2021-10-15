@@ -1,0 +1,7 @@
+ALTER TABLE orders
+  ADD orderAddress nvarchar(100)
+
+UPDATE orders 
+SET orders.orderAddress = users.userAddress
+FROM users, orders 
+WHERE users.userID = orders.userID

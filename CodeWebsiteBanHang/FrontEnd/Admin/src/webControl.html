@@ -1,0 +1,99 @@
+
+<div class="website-inner">
+    <div id="settingManager">
+        <button type="button" value='product' class="btn btn-outline-secondary active"  onclick="myFunction('product')" id="proManage"><a href="./productManage.html">Quản lý sản phẩm</a></button>
+        <button type="button" value='order' class="btn btn-outline-secondary"   onclick="myFunction('orders')" id="orderManage"><a href="./orderAdmin.html">Quản lý đơn hàng</a></button>
+        <button type="button" value='user' class="btn btn-outline-secondary"   onclick="myFunction('users')" id="userManage"><a href="./userManage.html">Quản lý người dùng</a></button>
+    </div>
+</div>
+<div id="logOutAdmin">
+    <p>Xin chào <span id="nameAdmin">TruongMyDuyen</span></p>
+    <a href="./../../giaodienchinh/src/index.html"><i class="fas fa-store" style="color:#04417fb8"></i></a>
+    <button type="button" class="btn btn-outline-secondary" id="logOut"><a href="../../giaodienchinh/src/index.html">Quay lại trang chủ</a></button>
+    <div class="variation_form_section">
+        <div class="select">
+          <div class="swatch-wrapper"></div>
+          <div class="swatch-wrapper"></div>
+          <div class="swatch-wrapper"></div>
+        </div>
+      </div>
+</div>
+<script>
+
+    let listdata = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")) : []
+    
+
+    const user=document.getElementById("userManage");
+    const product=document.getElementById("proManage");
+    const order=document.getElementById("orderManage");
+    document.querySelector("#nameAdmin").innerText=listdata[0].name
+    let choice = location.pathname
+
+    user.classList.remove('active')
+    product.classList.remove('active')
+    order.classList.remove('active')
+
+    console.log(choice)
+    switch(choice){
+        case '/Admin/src/orderAdmin.html' :{
+            order.classList.add('active')
+            break;
+        }
+        case '/Admin/src/productManage.html' :{
+            product.classList.add('active')
+            break;
+        }
+        case '/Admin/src/userManage.html' :{
+            user.classList.add('active')
+            break;
+        }
+    }
+ 
+
+</script>
+
+<style>
+    .website-inner{
+    padding-top:2em;
+    }
+    #settingManager{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #settingManager button{
+        margin-left:20px;
+    }
+    #settingManager button:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    #settingManager button a{
+        color: #000000;
+        text-decoration: none!important;
+        font-size: 16px;
+    }
+    #logOutAdmin{
+        display: flex;
+        margin:2em 0em;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        padding-right:10em;
+    }
+    #logOutAdmin p{
+        transform:translateY(30%);
+        padding-right: 3em;
+    }
+    #logOutAdmin i{
+        padding-right:1em;
+        font-size:1.8rem;
+    }
+    .active a{
+        color: #fff!important;
+    }
+    #logOutAdmin button a{
+        color: #000000!important;
+        text-decoration: none!important;
+    }
+</style>

@@ -1,0 +1,66 @@
+create table Categories
+(
+	catID			int identity(1,1) primary key,
+	catName			nvarchar(30)
+)
+
+create table Products
+(
+	proID			int identity(1,1) primary key,
+	proName			nvarchar(40),
+	proBrand		nvarchar(20),
+	proOrigin		nvarchar(30),
+	proOldPrice		int,
+	proPrice		int,
+	proDescription	ntext,
+	proStatus		int default 0,
+	catID			int foreign key (catID) references Categories,
+	proLinkPicture	ntext,
+	proLinkPicture1	ntext,
+	proLinkPicture2	ntext,
+	proLinkPicture3	ntext,
+	proNOS			int default 0,
+)
+
+
+create table Users
+(
+	userID			int identity(1,1) primary key,
+	userName		nvarchar(30),
+	userAccName		varchar(30),
+	userPass		varchar(30),
+	userPhone		varchar(15),
+	userAddress		nvarchar(100),
+	userStatus		int default 0,
+	isAdmin			bit,
+	userLinkAvatar	ntext,
+)
+
+
+create table Orders
+(
+	orderID			int identity(1,1) primary key,
+	proID			int foreign key (proID) references Products,
+	userID			int foreign key (userID) references Users,
+	proNum			int,
+	orderCTime		datetime default getdate(),
+	orderStatus		int default 0,
+	oderATime		datetime default null,
+)
+
+insert Categories values (N'Quần áo thể thao'), (N'Giày thể thao'), (N'Phụ kiện thể thao'), (N'Bóng')
+
+
+insert into Products (proName, proBrand, proOrigin, proOldPrice, proPrice, proDescription, catID, proLinkPicture, proLinkPicture1, proLinkPicture2, proLinkPicture3) 
+values (N'Air Jordan 1 Low', N'Nike', N'Việt Nam', 550000, 450000, N'Siêu xịn', 2, N'https://khogiaythethao.vn/wp-content/uploads/2020/08/giay-nike-air-jordan-1-low-black-toe.jpg', N'https://shopgiayreplica.com/wp-content/uploads/2020/11/jordan-1-low-light-smoke-grey.jpg', N'https://bizweb.dktcdn.net/100/363/576/products/air-jordan-1-low-white-metallic-gold-cz4776-100-1.jpg?v=1603178374000', N'https://bizweb.dktcdn.net/100/347/064/products/air-jordan-1-low-shoe-m16jdr.jpg?v=1598262665593'),
+(N'FIFA World Cup Knockout Top Glider Ball', N'Adidas', N'Việt Nam', 220000, 150000, N'Siêu xịn', 4, N'https://media3.scdn.vn/img3/2019/4_17/OOVgWy.jpg', N'https://www.sport9.vn/images/thumbs/qua/qua-bong-da-molten-f5u3400-k19_750_20001756_.jpeg', N'https://www.sport9.vn/images/thumbs/qua/qua-bong-da-molten-f5u3400-k19_750_20001756_.jpeg', N'https://cf.shopee.vn/file/59df15783847b0d441b796f96f03bddd'),
+(N'Váy thể thao', N'no Brand', N'Việt Nam', 200000, 120000, N'trắng và tròn', 1, N'https://cf.shopee.vn/file/77c48ecb08177b378c2dc54aa29906cd', N'http://fbshop.vn/wp-content/uploads/2018/04/vay-cau-long-victor-k81303-4-466x400.gif', N'https://fbshop.vn/wp-content/uploads/2018/04/vay-cau-long-victor-k76300-2.gif', N'https://cf.shopee.vn/file/5cd7a4f75c66f506336d93fb3b248e89'),
+(N'Cần câu cá lure 2 khúc Máy YF200', N'Neki', N'Việt Nam', 450000, 350000, N'Thơm', 3, N'https://salt.tikicdn.com/cache/w1200/ts/product/f4/ef/dc/172eced32a4e5b8d50cbf2523974efc0.jpg', N'https://baothainguyen.vn/UserFiles/image/cs(30).jpg', N'https://vinmec-prod.s3.amazonaws.com/images/20191125_074919_348099_can-sa.max-1800x1800.jpg', N'https://salt.tikicdn.com/cache/w444/ts/product/fd/b6/8f/3f179a49c92a7993ec9ec077154cf406.jpg'),
+(N'Chuột thể thao điện tử Logitech', N'Logitech', N'Trung Quốc', 600000, 400000, N'Siêu xịn', 3, N'https://cf.shopee.vn/file/4a628d09896585e303a2644b03171b0d', N'https://phucanhcdn.com/media/product/35684_g304.jpg', N'http://ae01.alicdn.com/kf/H73874085766d48a192f521766553aed3Z.jpg_q50.jpg', N'https://anphat.com.vn/media/product/37343_logitech_g304_kda__1_.jpg')
+
+insert into Users (userName, userAccName, userPass, userPhone, userAddress, isAdmin, userLinkAvatar)
+values (N'Admin', 'admin', '1', '01234567890', N'Đà Nẵng', 1, N'https://vi-magento.com/wp-content/uploads/2020/09/ASSET-USER-ADMIN.png')
+
+
+insert into Orders (proID, userID, proNum)
+values (1, 1, 1)
